@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django - Users</title>
+</head>
+<body>
+
+    {% extends "basics/main.html" %}
+    {% block content %}
+
+        <h4>Page: {{ page_name_key }}</h4>
+
+        {% for user in users_list_key %}
+
+            <ul>
+                <li>Username: {{ user.username }}</li>
+                <li>First Name: {{ user.first_name }}</li>
+                <li>Middle Name: {{ user.middle_name }}</li>
+                <li>Last Name: {{ user.last_name }}</li>
+                <br>
+            </ul>
+
+        {% endfor %}
+
+
+    {% endblock content %}
+
+</body>
+</html>
